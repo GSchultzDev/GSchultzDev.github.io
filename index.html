@@ -3,7 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gabriel Schultz - Desenvolvedor Full Stack em formação. Portfólio com projetos em HTML, CSS, JavaScript, React Native, PHP e mais.">
+    <meta name="keywords" content="desenvolvedor, full stack, javascript, react native, php, portfolio, gabriel schultz">
+    <meta name="author" content="Gabriel Schultz">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gschultzdev.github.io/">
+    <meta property="og:title" content="GSchultz - Portfólio de Desenvolvedor">
+    <meta property="og:description" content="Desenvolvedor Full Stack em formação, especializado em tecnologias web modernas.">
+    <meta property="og:image" content="./images/eu.jpg">
+    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gschultzdev.github.io/">
+    <meta property="twitter:title" content="GSchultz - Portfólio de Desenvolvedor">
+    <meta property="twitter:description" content="Desenvolvedor Full Stack em formação, especializado em tecnologias web modernas.">
+    <meta property="twitter:image" content="./images/eu.jpg">
+    
     <title>GSchultz - Portfólio de Desenvolvedor</title>
+    <link rel="canonical" href="https://gschultzdev.github.io/">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
@@ -21,8 +39,7 @@
     </script>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-    <!-- Navegação -->
-    <nav class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 z-50 transition-all duration-300">
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 z-50 transition-all duration-300" role="navigation" aria-label="Navegação principal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
@@ -55,7 +72,6 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile menu -->
         <div id="mobile-nav" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="#home" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors">Início</a>
@@ -66,9 +82,11 @@
             </div>
         </div>
     </nav>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-primary text-white p-2 z-50">Pular para o conteúdo principal</a>
+</nav>
 
-    <!-- Seção Principal -->
-    <section id="home" class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center pt-16">
+<main id="main-content">
+    <section id="home" class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center pt-16" aria-label="Seção inicial">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="text-center lg:text-left">
@@ -95,7 +113,6 @@
         </div>
     </section>
 
-    <!-- Seção Sobre -->
     <section id="about" class="py-20 bg-white dark:bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">Sobre Mim</h2>
@@ -128,7 +145,6 @@
         </div>
     </section>
 
-    <!-- Seção Habilidades -->
     <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">Habilidades & Tecnologias</h2>
@@ -166,7 +182,6 @@
         </div>
     </section>
 
-    <!-- Seção Projetos -->
     <section id="projects" class="py-20 bg-white dark:bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">Projetos em Destaque</h2>
@@ -227,7 +242,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">placeholder3</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">placeholder3 placeholder3 placeholder3 placeholder3 placeholder3 placeholder3 placeholder3 placeholder3 placeholder3</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">placeholder3 placeholder3 placeholder3 placeholder3 placeholder3 placeholder3 placeholder3 placeholder3</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">JavaScript</span>
                             <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">Chart.js</span>
@@ -240,7 +255,6 @@
         </div>
     </section>
 
-    <!-- Seção Contato -->
     <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">Entre em Contato</h2>
@@ -250,8 +264,6 @@
                     Estou em busca de oportunidades de estágio para aplicar meus conhecimentos e continuar 
                     aprendendo. Sinta-se à vontade para entrar em contato!
                 </p>
-                
-                <!-- Informações de Contato -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                     <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <div class="flex flex-col items-center">
@@ -281,7 +293,6 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer class="bg-gray-900 dark:bg-black text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -295,6 +306,12 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <link rel="preload" href="./images/eu.jpg" as="image">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <script src="script.js" defer></script>
 </body>
 </html>
