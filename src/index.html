@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSchultz - Portfólio de Desenvolvedor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007bff',
+                        secondary: '#6c757d'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navegação -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-primary hover:text-blue-600 transition-colors">
+                        GSchultz<span class="text-gray-600 dark:text-gray-400">.dev</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Início</a>
+                        <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Sobre</a>
+                        <a href="#skills" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Habilidades</a>
+                        <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Projetos</a>
+                        <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">Contato</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300 hover:scale-110" aria-label="Alternar modo claro/escuro">
+                        <i class="fas fa-moon text-lg"></i>
+                    </button>
+                    <div class="md:hidden">
+                        <button id="mobile-menu" class="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-primary focus:outline-none">
+                            <div class="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                                <span class="block w-5 h-0.5 bg-current transform transition-transform"></span>
+                                <span class="block w-5 h-0.5 bg-current transform transition-transform"></span>
+                                <span class="block w-5 h-0.5 bg-current transform transition-transform"></span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-nav" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors">Início</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors">Sobre</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors">Habilidades</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors">Projetos</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Principal -->
+    <section id="home" class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+                        Olá, eu sou <span class="text-primary bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">GSchultz</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 font-medium">Desenvolvedor Full Stack</p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                        Eu crio experiências web incríveis com tecnologias modernas.
+                        Apaixonado por código limpo e soluções inovadoras.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#projects" class="bg-primary hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg">Ver Meus Trabalhos</a>
+                        <a href="#contact" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105">Entre em Contato</a>
+                    </div>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <img src="./images/eu.jpg" alt="Perfil GSchultz" class="w-80 h-80 rounded-full object-cover shadow-2xl border-4 border-white dark:border-gray-700">
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400 to-purple-500 opacity-20"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">Sobre Mim</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        Sou um desenvolvedor em formação, cursando Sistemas para Internet e com 1 ano de experiência 
+                        como desenvolvedor FullStack na rapidaoAPP. Tenho paixão por criar soluções web e estou 
+                        sempre em busca de aprender novas tecnologias e aprimorar minhas habilidades.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <h3 class="text-3xl font-bold text-primary mb-2">10+</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Projetos Desenvolvidos</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-3xl font-bold text-primary mb-2">1+</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Ano de Experiência</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-3xl font-bold text-primary mb-2">2025</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Formatura Prevista</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img src="./images/ChatGPT Image 15 de jun. de 2025, 20_27_12.png" alt="Sobre GSchultz" class="w-full max-w-md rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">Habilidades & Tecnologias</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-bold mb-6 text-center text-gray-900 dark:text-white">Frontend</h3>
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">HTML5</span>
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">CSS3</span>
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">JavaScript</span>
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">TypeScript</span>
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">Tailwind CSS</span>
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">Angular</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-bold mb-6 text-center text-gray-900 dark:text-white">Backend & Mobile</h3>
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">PHP</span>
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">PostgreSQL</span>
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">React Native</span>
+                        <span class="bg-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">Node.js (Estudando)</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-bold mb-6 text-center text-gray-900 dark:text-white">Ferramentas & Outros</h3>
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">Git</span>
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">VS Code</span>
+                        <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">Figma</span>
+                        <span class="bg-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">Docker (Estudando)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">Projetos em Destaque</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="relative group">
+                        <img src="placeholder.png" alt="Plataforma E-commerce" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white text-2xl hover:scale-110 transition-transform"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-white text-2xl hover:scale-110 transition-transform"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Plataforma E-commerce</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">Uma solução completa de e-commerce construída com React e Node.js, incluindo autenticação de usuários, integração de pagamentos e painel administrativo.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">React</span>
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">Node.js</span>
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">MongoDB</span>
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="relative group">
+                        <img src="placeholder.png" alt="App de Gerenciamento de Tarefas" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white text-2xl hover:scale-110 transition-transform"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-white text-2xl hover:scale-110 transition-transform"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">App de Gerenciamento de Tarefas</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">Uma aplicação colaborativa de gerenciamento de tarefas com atualizações em tempo real, funcionalidade de arrastar e soltar e recursos de colaboração em equipe.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">Vue.js</span>
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">Socket.io</span>
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">Express</span>
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="relative group">
+                        <img src="placeholder.png" alt="Dashboard do Clima" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white text-2xl hover:scale-110 transition-transform"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-white text-2xl hover:scale-110 transition-transform"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Dashboard do Clima</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">Uma aplicação responsiva de clima com previsões baseadas em localização, mapas interativos e análises detalhadas do tempo.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">JavaScript</span>
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">Chart.js</span>
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">OpenWeather API</span>
+                            <span class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">Entre em Contato</h2>
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Vamos conversar!</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-12 leading-relaxed">
+                    Estou em busca de oportunidades de estágio para aplicar meus conhecimentos e continuar 
+                    aprendendo. Sinta-se à vontade para entrar em contato!
+                </p>
+                
+                <!-- Informações de Contato -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex flex-col items-center">
+                            <i class="fas fa-envelope text-primary text-3xl mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Email</h4>
+                            <a href="mailto:gabriel.a.f.schultz@hotmail.com" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">gabriel.a.f.schultz@hotmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex flex-col items-center">
+                            <i class="fab fa-linkedin text-primary text-3xl mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/gabrielschultz/" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">linkedin.com/in/gabrielschultz/</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex flex-col items-center">
+                            <i class="fab fa-github text-primary text-3xl mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">GitHub</h4>
+                            <a href="https://github.com/GSchultzDev" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">github.com/GSchultzDev</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 dark:bg-black text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">&copy; 2024 GSchultz. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors text-xl"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors text-xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
